@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../css/App.css';
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
         >
           Learn React
         </a>
-        <p>Last night.</p>
+
+      <p>I had fun with you last night...</p>
       </header>
     </div>
   );
