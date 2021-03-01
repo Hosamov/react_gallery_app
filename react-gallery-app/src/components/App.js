@@ -1,27 +1,21 @@
-import logo from '../logo.svg';
-import '../css/App.css';
+import React from 'react';
+import { //remember, first: npm install --save react-router-dom
+  BrowserRouter, //BrowserRouter renders the root router...
+  Route,
+  Switch
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+//App Components
+import Search from './Search';
+import Nav from './Nav';
+import Gallery from './Gallery';
 
-      <p>I had fun with you last night...</p>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="container">
+    <Search />
+    <Nav />
+    <Gallery />
+  </div>
+);
 
 export default App;
