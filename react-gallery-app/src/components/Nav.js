@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/*STATELESS COMPONENT*/
+
 const Nav = () => {
   return(
     <nav className="main-nav">

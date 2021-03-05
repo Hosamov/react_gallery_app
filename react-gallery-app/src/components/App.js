@@ -28,62 +28,27 @@ class App extends Component {
     super();
     this.state = {
       photos: [],
-      picsArduino: [],
-      picsRPi: [],
-      picsLego: [],
       loading: true
     };
   }
 
-
   componentDidMount() {
     this.performSearch();
-
-    axios.get(`${url}${navQueries[0]}&per_page=24&format=json&nojsoncallback=1`)
-      .then(response => {
-        this.setState( {
-          photosLego: response.data.photos.photo,  //response.data.photos.photo
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data ', error);
-      });
-
-    axios.get(`${url}${navQueries[1]}&per_page=24&format=json&nojsoncallback=1`)
-      .then(response => {
-        this.setState( {
-          photosRPi: response.data.photos.photo,  //response.data.photos.photo
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data ', error);
-      });
-
-    axios.get(`${url}${navQueries[2]}&per_page=24&format=json&nojsoncallback=1`)
-      .then(response => {
-        this.setState( {
-          photosArduino: response.data.photos.photo,  //response.data.photos.photo
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data ', error);
-      });
-
   }
 
-  performSearch = (query="cats") => {
+  performSearch = (query = 'birds') => {
     axios.get(`${url}${query}&per_page=24&format=json&nojsoncallback=1`)
       .then(response => {
         this.setState( {
-          photos: response.data.photos.photo,  //response.data.photos.photo
-          query: query
+          photos: response.data.photos.photo,
+          loading: false
         });
-
       })
       .catch(error => {
         // handle error
         console.log('Error fetching and parsing data ', error);
       });
+
   }
 
   render() {
@@ -94,9 +59,9 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" render={ () => <Gallery data={this.state.photos} />} />
-          <Route exact path="/lego" render={ () => <Gallery data={this.state.picsLego} />} />
-          <Route exact path="/rpi" render={ () => <Gallery data={this.state.picsRPi} />} />
-          <Route exact path="/arduino" render={ () => <Gallery data={this.state.picsArduino} />} />
+          <Route exact path="/lego" render={ () => <Gallery data={this.state.photos} />} />
+          <Route exact path="/rpi" render={ () => <Gallery data={this.state.photos} />} />
+          <Route exact path="/arduino" render={ () => <Gallery data={this.state.photos} />} />
           <Route component={Err} />
         </Switch>
       </div>
