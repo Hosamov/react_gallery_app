@@ -1,13 +1,10 @@
 import React from 'react';
 
-const Photo = (props) => {
-  return(
-    <>
-      <li>
-        <img src={`${props.url}${props.server_id}$/${props.id}_${props.secret}.jpg`} alt="" />
-        {console.log(props.url)}
-      </li>
-    </>
+const Photo = props => {
+  return (
+    <li>
+      <img src={props.url} alt="" />
+    </li>
   );
 }
 
