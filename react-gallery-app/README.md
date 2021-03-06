@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Developer Notes
+
+Place config.js in '/src' directory.\
+Note: config.js should include the following:\
+\
+const apiKey = 'YOUR FLICKR API KEY';\
+export default apiKey;\
+
+
 ## Available Scripts
 
 In the project directory, you can run:
