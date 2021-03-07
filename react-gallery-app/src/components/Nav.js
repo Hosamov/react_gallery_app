@@ -7,9 +7,9 @@ const Nav = () => {
   return(
     <nav className="main-nav">
       <ul>
-        <li><NavLink to='/lego'>Lego</NavLink></li>
-        <li><NavLink to='/rpi'>RaspberryPi</NavLink></li>
-        <li><NavLink to='/arduino'>Arduino</NavLink></li>
+        <li><NavLink to='/martin'>Martin Guitars</NavLink></li>
+        <li><NavLink to='/gibson'>Gibson Guitars</NavLink></li>
+        <li><NavLink to='/fender'>Fender Guitars</NavLink></li>
       </ul>
     </nav>
   );
