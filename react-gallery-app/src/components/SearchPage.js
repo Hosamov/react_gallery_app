@@ -10,7 +10,7 @@ const SearchPage = (props, {match}) => {
   console.log(query);
 
   return (
-    <Gallery data={props.data} picSearch={props.picSearch} query={query} />
+    <Gallery data={props.data} loading={props.loading} picSearch={props.picSearch} query={query} />
   );
 }
 

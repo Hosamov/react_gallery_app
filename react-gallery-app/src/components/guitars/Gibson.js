@@ -5,7 +5,7 @@ const Gibson = props => {
   let dataQuery = 'gibson guitars';
 
   return(
-    <Gallery data={props.data} picSearch={props.picSearch} query={dataQuery} />
+    <Gallery data={props.data} loading={props.loading} picSearch={props.picSearch} query={dataQuery} />
   );
 }
 

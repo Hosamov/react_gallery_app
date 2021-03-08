@@ -9,41 +9,37 @@ import NotFound from './NotFound'; //used when Flickr is up and running to displ
 const imgURL = `https://live.staticflickr.com/`;
 
 
-/*STATEFUL COMPONENT*/
+/*
+* STATEFUL COMPONENT
+* Renders component: Photo
+*
+*/
 
 class Gallery extends Component {
 
-  /*
-  //
-  */
-
   componentDidMount() {
-    this.props.picSearch(this.props.query);
+    this.props.picSearch(this.props.query); //ensure picSearch is passed correct (query) param before proceeding...
   }
 
-  //component  method here...?
-
-
-
-
   render() {
-
     const results = this.props.data;
-    //const query = this.props.queryString;
-    //console.log(this.props);
     let photos;
-    if(results.length > 0) {
-      photos = results.map(photo =>
-        <Photo url={`${imgURL}${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
-      );
 
+    if(!this.props.loading) {
+      if(results.length > 0) {
+        photos = results.map(photo =>
+          <Photo url={`${imgURL}${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
+        );
+      } else {
+        photos = <NotFound />
+      }
     } else {
-      photos = <NotFound />
+      return <h2>Loading...</h2>
     }
 
     return(
       <div className="photo-container">
-        <h2>Results for {this.props.dataQuery || this.props.query}</h2>
+        <h2>Results for {this.props.query}</h2>
         <ul>
           {photos}
         </ul>

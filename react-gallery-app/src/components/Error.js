@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Err = () => {
+//STATELESS COMPONENT
+//Returns 404-like error message
+const Error = () => {
 
   return(
-    <div className="not-found">
-      <h2>Page Not Found</h2>
-      <form action="/">
-        <button type="submit">Return to Homepage</button>
-      </form>
-    </div>
+      <div className="not-found">
+        <h2>Uh oh! Page Not Found...</h2>
+        <h3><Link to='/'>Click here to return to Homepage</Link></h3>
+      </div>
   );
 }
 
-export default Err;
+export default Error;
