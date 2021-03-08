@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from '../Gallery';
 
-const Fender = props => {
+const Guitars = props => {
   let dataQuery = 'guitars';
 
   return(
@@ -9,4 +9,4 @@ const Fender = props => {
   );
 }
 
-export default Fender;
+export default Guitars;

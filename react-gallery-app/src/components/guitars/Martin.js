@@ -1,6 +1,9 @@
 import React from 'react';
 import Gallery from '../Gallery';
 
+
+//STATELESS COMPONENT
+//Passes 'Martin Guitars' to Gallery component
 const Martin = (props) => {
   let dataQuery = 'martin guitars';
 

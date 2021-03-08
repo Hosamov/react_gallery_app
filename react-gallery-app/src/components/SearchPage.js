@@ -5,9 +5,9 @@ import Gallery from './Gallery';
 
 
 //STATELESS COMPONENT
+//Passes search data to Gallery component
 const SearchPage = (props, {match}) => {
-  let query = props.match.params.query; //access query param passed to SearchPage
-  console.log(query);
+  let query = props.match.params.query; //access query param passed to SearchPage using match
 
   return (
     <Gallery data={props.data} loading={props.loading} picSearch={props.picSearch} query={query} />

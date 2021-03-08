@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router";
-
-//Create history instance...
-// import { createBrowserHistory } from 'history';
-// let history = createBrowserHistory();
-
+import { withRouter } from "react-router-dom";
 
 /* STATEFUL COMPONENT
 *  Called by App.js
 *  Dynamically adds a searchbar to the homepage
 */
-
 class Search extends Component {
 
 state = { searchInput: ''}; //track the search value that was submitted by the user
@@ -26,9 +20,7 @@ handleSubmit = event => {
   this.props.history.push(route); //Push new entry onto the history stack (using withRouter)
   event.currentTarget.reset(); //identifies current target (searchbar) for the event and resets it
 }
-  /*
-    TODO: Add description here
-  */
+
   render() {
     return (
       <form className="search-form" onSubmit={this.handleSubmit}>
@@ -44,7 +36,6 @@ handleSubmit = event => {
           </svg>
         </button>
       </form>
-
     );
   }
 }
