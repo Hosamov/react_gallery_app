@@ -2,9 +2,11 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
+  background-color: #1e212d;
 }
 
 h2 {
+  color: #faf3e0;
   font-size: 2em;
   margin: 52px 0 40px;
   text-transform: capitalize;
@@ -23,11 +25,14 @@ a {
   max-width: 460px;
   display: flex;
   margin: 0 auto 32px;
+  border-radius: 0.5em;
+  border: 2px solid #b68973;
+
 }
 
 .search-form button {
   outline: none;
-  background-color: #438bbd;
+  background-color: #b68973;
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
@@ -52,16 +57,17 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
+  background: #b68973;
   border-radius: 3px;
   padding: 5px;
-  color: #fff;
+  color: #faf3e0;
 }
 
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #275270;
+  background-color: #faf3e0;
+  color: #b68973;
 }
 
 .photo-container ul {
@@ -79,6 +85,10 @@ input {
   margin-bottom: 15px;
 }
 
+.photo-container ul li {
+  border: 2px solid #eabf9f; /* Updated */
+}
+
 .photo-container ul img {
   width: 100%;
   transform: scale(1.25);
@@ -91,6 +101,11 @@ input {
 
 .photo-container .not-found {
   width: 100%;
+  color: #faf3e0;
+}
+
+.photo-container .not-found h3 a {
+  color: #faf3e0;
 }
 
 @media only screen and (max-width: 767px)  {
@@ -117,7 +132,7 @@ input {
     display: flex;
     justify-content: center;
   }
-  
+
   .main-nav li {
     margin: 10px;
     width: 100px;
