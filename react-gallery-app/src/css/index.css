@@ -2,11 +2,13 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
-  background-color: #1e212d;
+  /* background-color: #1e212d; */
+  background-color: #f4eee8;
 }
 
 h2 {
-  color: #faf3e0;
+  /* color: #faf3e0; */
+  color: #114e60;
   font-size: 2em;
   margin: 52px 0 40px;
   text-transform: capitalize;
@@ -26,13 +28,14 @@ a {
   display: flex;
   margin: 0 auto 32px;
   border-radius: 0.5em;
-  border: 2px solid #b68973;
+  /* border: 2px solid #b68973; */
+  border: 2px solid #325288;
 
 }
 
 .search-form button {
   outline: none;
-  background-color: #b68973;
+  background-color: #325288;
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
@@ -57,7 +60,7 @@ input {
 
 .main-nav a {
   display: block;
-  background: #b68973;
+  background: #325288;
   border-radius: 3px;
   padding: 5px;
   color: #faf3e0;
@@ -66,8 +69,9 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #faf3e0;
-  color: #b68973;
+  background-color: #668ac7;
+  /* color: #b68973; */
+  color: #f4eee8;
 }
 
 .photo-container ul {
@@ -86,7 +90,7 @@ input {
 }
 
 .photo-container ul li {
-  border: 2px solid #eabf9f; /* Updated */
+  border: 2px solid #114e60; /* Updated */
 }
 
 .photo-container ul img {

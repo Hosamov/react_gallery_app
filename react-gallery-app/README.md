@@ -4,9 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Developer Notes
 
+Before launching this application, please acquire an API key for Flickr: https://www.flickr.com/services/api/misc.api_keys.html
+
 Place config.js in '/src' directory.\
 Note: config.js should include the following:\
 \
+//config.js//
 const apiKey = 'YOUR FLICKR API KEY';\
 export default apiKey;\
 
